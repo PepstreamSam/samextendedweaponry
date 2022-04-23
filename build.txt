@@ -1,0 +1,3 @@
+displayName = Sam's Extended Arsenal
+author = Pepstream Sam
+version = 0.1

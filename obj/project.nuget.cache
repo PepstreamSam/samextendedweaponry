@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "yN0S9hfIAZFzO1jXuHNHXu4z2W0OJxyT/YSK9m2DflVA6wVQDe3UvPQit5BF1QyXNax+H6P+mmylpHR8oGH06Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\xboxs\\OneDrive\\Documentos\\My Games\\Terraria\\ModLoader\\Mod Sources\\samextendedweaponry\\samextendedweaponry.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\xboxs\\.nuget\\packages\\tmodloader.codeassist\\0.1.3\\tmodloader.codeassist.0.1.3.nupkg.sha512"
+  ],
+  "logs": []
+}
