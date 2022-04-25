@@ -14,11 +14,11 @@ namespace samextendedweaponry.Items.guns
 		}
 
 		public override void SetDefaults() {
-			item.damage = 85; // Sets the item's damage. Note that projectiles shot by this weapon will use its and the used ammunition's damage added together.
+			item.damage = 70; // Sets the item's damage. Note that projectiles shot by this weapon will use its and the used ammunition's damage added together.
 			item.ranged = true; // sets the damage type to ranged
 			item.width = 20; // hitbox width of the item
 			item.height = 20; // hitbox height of the item
-			item.useTime = 4; // The item's use time in ticks (60 ticks == 1 second.)
+			item.useTime = 3; // The item's use time in ticks (60 ticks == 1 second.)
 			item.useAnimation = 4; // The length of the item's use animation in ticks (60 ticks == 1 second.)
 			item.useStyle = ItemUseStyleID.HoldingOut; // how you use the item (swinging, holding out, etc)
 			item.noMelee = true; //so the item's animation doesn't do damage
@@ -36,10 +36,10 @@ namespace samextendedweaponry.Items.guns
 		{
 			// Here we manually spawn the 2nd projectile, manually specifying the projectile type that we wish to shoot.
 			type = Main.rand.Next(new int[] { type, ModContent.ProjectileType<Projectiles.prjctl>() });
-			Projectile.NewProjectile(position.X, position.Y, speedX, speedY, ProjectileID.ExplosiveBullet, damage, knockBack, player.whoAmI);
+			Projectile.NewProjectile(position.X, position.Y, speedX, speedY, ProjectileID.Spark, damage, knockBack, player.whoAmI);
 			if (type == ProjectileID.Bullet) // or ProjectileID.WoodenArrowFriendly
 			{
-				type = ProjectileID.MoonlordBullet; // or ProjectileID.FireArrow;
+				type = ProjectileID.BulletHighVelocity; // or ProjectileID.FireArrow;
 			}
 			return true; // return true to allow tmodloader to call Projectile.NewProjectile as normal
 		}

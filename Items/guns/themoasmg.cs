@@ -14,7 +14,7 @@ namespace samextendedweaponry.Items.guns
 		}
 
 		public override void SetDefaults() {
-			item.damage = 1096; // Sets the item's damage. Note that projectiles shot by this weapon will use its and the used ammunition's damage added together.
+			item.damage = 109600; // Sets the item's damage. Note that projectiles shot by this weapon will use its and the used ammunition's damage added together.
 			item.ranged = true; // sets the damage type to ranged
 			item.width = 80; // hitbox width of the item
 			item.height = 100; // hitbox height of the item
@@ -39,6 +39,7 @@ namespace samextendedweaponry.Items.guns
 		}
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
+			type = Main.rand.Next(new int[] { type, ModContent.ProjectileType<Projectiles.prjctl>(), ProjectileID.VortexBeaterRocket, });
 			if (type == ProjectileID.Bullet) // or ProjectileID.WoodenArrowFriendly
 			{
 				type = ProjectileID.ChlorophyteBullet; // or ProjectileID.FireArrow;
